@@ -2,53 +2,12 @@
 
 Indieweb::PostTypes::Identifier::Read is a Ruby gem to extend [Indieweb::PostTypes](https://rubygems.org/gems/indieweb-post_types) discovery to support the [`read` post type](https://indieweb.org/read).
 
-## Installation
+## What has happened to the project?
 
-Add this line to your application's Gemfile:
+TLDR: Project (`indieweb-post_types-identifier-read`) is now [hosted on Sourcehut](https://code.deeden.co.uk/indieweb-post_types-identifier-read) due to GitHub's continued collaboration with ICE (U.S. Immigration and Customs Enforcement).
 
-```ruby
-gem 'indieweb-post_types-identifier-read'
-```
+Hello :wave:, nice to see you! If you're here you're presumably looking for the project (`indieweb-post_types-identifier-read`) that used to be here. The project still exists, it has just moved elsewhere. Let me tell you both why, and where you can find the project now.
 
-And then execute:
+Given GitHub's [ongoing policy of collaborating with ICE](https://thenextweb.com/politics/2019/10/09/github-microsoft-trump-ice-contract/) I don't feel comfortable supporting the platform ([as](https://deeden.co.uk/notes/2019/10/24/085956/) [I've](https://deeden.co.uk/notes/2019/11/15/094544/) [mentioned](https://deeden.co.uk/notes/2019/11/20/160118/) [elsewhere](https://deeden.co.uk/notes/2020/04/14/165427/)), so I've gradually moved all of my repositories (both private and public) elsewhere.
 
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install indieweb-post_types-identifier-read
-
-## Usage
-
-Once the gem is installed you need to configure `Indieweb::PostTypes` to use it. The following code would configure `Indieweb::PostTypes` to use the `read` identifier before the default `article` identifier. You could also choose to insert the `read` identifier before a different identifier if you so wish.
-
-```ruby
-Indieweb::PostTypes.configure do |config|
-  config.insert_identifier(klass: Indieweb::PostTypes::Identifier::Read,
-                           before: Indieweb::PostTypes::Identifier::Article)
-end
-```
-
-Then just use `Indieweb::PostTypes` as normal...
-
-```ruby
-post_type = Indieweb::PostTypes.type_from(data)
-```
-
-## Development
-
-After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
-
-To install this gem onto your local machine, run `bundle exec rake install`.
-
-## Contributing
-
-Bug reports and pull requests are welcome on GitHub at https://github.com/srushe/indieweb-post_types-identifier-read. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
-
-## License
-
-The gem is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
-
-## Code of Conduct
-
-Everyone interacting in the Indieweb::PostTypes::Identifier::Read project’s codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/srushe/indieweb-post_types-identifier-read/blob/master/CODE_OF_CONDUCT.md).
+I've hoped that GitHub would cancel their policy ([as do many of the staff](https://www.washingtonpost.com/context/letter-from-github-employees-to-ceo-about-the-company-s-ice-contract/fb280de9-2bc3-40d5-b1a5-e3b954bf0d25/), including good people I know), but nothing has happened, so I've moved. You can find the [project at Sourcehut](https://code.deeden.co.uk/indieweb-post_types-identifier-read), as well as [issue tracking](https://code.deeden.co.uk/indieweb-post_types-identifier-read/issues). [Patches](https://code.deeden.co.uk/indieweb-post_types-identifier-read/patches) will also still be gratefully received.
